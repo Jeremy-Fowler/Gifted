@@ -14,7 +14,6 @@ let params = {
 class GiphyService {
   async search(query) {
     AppState.giphys = []
-    params.offset = AppState.offset
     params.q = query
     const res = await giphyApi.get('search', { params })
     logger.log(res.data)
