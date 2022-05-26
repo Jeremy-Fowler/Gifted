@@ -20,6 +20,7 @@ class SandboxService {
     logger.log(res.data)
     AppState.gifts.unshift(res.data)
   }
+
 }
 
 export const sandboxService = new SandboxService()

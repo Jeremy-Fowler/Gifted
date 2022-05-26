@@ -35,6 +35,7 @@
       <form @submit.prevent="search()">
         <div class="input-group mb-3 px-2">
           <input
+            required
             for="search"
             type="text"
             class="form-control"
@@ -87,6 +88,8 @@ export default {
         if (await Pop.confirm('<i class="mdi mdi-arrow-up-thick"></i> You want to post this gift? <i class="mdi mdi-arrow-up-thick"></i>', 'It had better be sick, okay?', editable.value.url, 'DO IT')) {
           try {
             await sandboxService.create(editable.value)
+            editable.value.tag = ''
+            editable.value.url = ''
             Pop.toast('Succesfully created a new gift!', 'success')
           } catch (error) {
             logger.error(error)
