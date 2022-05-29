@@ -9,7 +9,7 @@ class SandboxService {
     AppState.gifts = res.data
   }
   async openGift(id) {
-    const res = await api.put('api/gifts/' + id, { opened: true })
+    const res = await api.put('api/gifts/' + id, { opened: false })
     logger.log(res.data)
     const index = AppState.gifts.findIndex(g => g._id == id)
     AppState.gifts[index] = res.data

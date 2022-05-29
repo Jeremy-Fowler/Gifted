@@ -7,6 +7,7 @@
           <label for="tag" class="form-label ms-1">Tag</label>
           <input
             required
+            maxlength="120"
             type="text"
             class="form-control"
             id="tag"
