@@ -6,6 +6,6 @@ export const api = Axios.create({
 })
 
 export const giphyApi = Axios.create({
-  baseURL: 'http://api.giphy.com/v1/gifs',
+  baseURL: 'https://api.giphy.com/v1/gifs',
   timeout: 8000
 })
